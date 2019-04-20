@@ -21,4 +21,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DomesticManagement.Database\DomesticManagement.Database.csproj" />
+  </ItemGroup>
+
 </Project>
