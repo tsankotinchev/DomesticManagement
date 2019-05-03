@@ -18,9 +18,9 @@ namespace DomesticManagement.Database.Entities
         public int Age { get; set; }
         public string Password { get; set; }
         public virtual ICollection<DomesticResponsibilityOccurance> DomesticResponsibilityOccurances { get; }
-        public DateTime? CreatedOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime? ModifiedOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Guid CreatedBy { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Guid ModifiedBy { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime? CreatedOn { get; set; }
+        public DateTime? ModifiedOn { get; set; }
+        public Guid CreatedBy { get; set; }
+        public Guid ModifiedBy { get; set; }
     }
 }

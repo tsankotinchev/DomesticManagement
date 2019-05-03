@@ -11,20 +11,20 @@ namespace DomesticManagement.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class AccountController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         //private readonly RoleManager<Role> _roleManager;
-        public UserController(UserManager<User> userManager,
+        public AccountController(UserManager<User> userManager,
             SignInManager<User> signInManager,
             IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        [HttpGet]
-
+        [HttpPost]
+        [Route("register")]
         public async Task<IActionResult> Register([FromBody] UserCredentialsDto model)
         {
             if (!ModelState.IsValid)
